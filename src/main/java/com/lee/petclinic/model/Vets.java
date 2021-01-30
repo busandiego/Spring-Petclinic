@@ -11,4 +11,43 @@ public class Vets {
     private String specialities;
     private Timestamp createdDate;
 
+
+    public Vets(Integer id, String name, String specialities, Timestamp createdDate) {
+        this.id = id;
+        this.name = name;
+        this.specialities = specialities;
+        this.createdDate = createdDate;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSpecialities() {
+        return specialities;
+    }
+
+    public Timestamp getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSpecialities(String specialities) {
+        this.specialities = specialities;
+    }
+
+    public void setCreatedDate(Timestamp createdDate) {
+        this.createdDate = createdDate;
+    }
 }

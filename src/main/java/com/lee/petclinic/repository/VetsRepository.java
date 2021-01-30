@@ -1,4 +1,4 @@
-package com.lee.petclinic.respository;
+package com.lee.petclinic.repository;
 
 import com.lee.petclinic.model.Vets;
 import org.springframework.stereotype.Repository;

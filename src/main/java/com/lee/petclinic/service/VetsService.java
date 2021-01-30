@@ -1,8 +1,7 @@
 package com.lee.petclinic.service;
 
 import com.lee.petclinic.model.Vets;
-import com.lee.petclinic.respository.VetsRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.lee.petclinic.repository.VetsRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,7 +22,7 @@ public class VetsService {
 
          List<Vets> vets = vetsRepository.findAll();
 
-        System.out.println(vets);
+        System.out.println("vets: "+ vets);
 
 
 

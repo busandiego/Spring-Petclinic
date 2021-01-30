@@ -14,15 +14,22 @@ spring:
     url: jdbc:mysql://localhost:3306/petclinic?serverTimezone=Asia/Seoul&useSSL=false&allowPublicKeyRetrieval=true
     username: lee
     password: bitc5600
-#
-#  jpa:
-#    open-in-view: true
-#    hibernate:
-#      ddl-auto: create
-#      naming:
-#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-#      use-new-id-generator-mappings: false
-#    show-sql: true
+  devtools:
+    livereload:
+      enabled: true
+
+
+
+
+  #
+  #  jpa:
+  #    open-in-view: true
+  #    hibernate:
+  #      ddl-auto: create
+  #      naming:
+  #        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  #      use-new-id-generator-mappings: false
+  #    show-sql: true
 
   # servlet:
   #   multipart:
@@ -35,7 +42,7 @@ spring:
   #     password: 1234
 
 #cos:
-#  secret: °ÙÀÎµ¥¾î
+#  secret: ï¿½ï¿½ï¿½Îµï¿½ï¿½ï¿½
 
 #file:
 #  path: C:/src/jwtoauthreact/instagram/src/main/resources/upload/
