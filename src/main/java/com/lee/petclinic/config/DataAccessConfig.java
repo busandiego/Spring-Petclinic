@@ -15,6 +15,7 @@ import javax.sql.DataSource;
 @MapperScan(basePackages = "com.lee.petclinic.repository")
 public class DataAccessConfig {
     // bean은 Ioc컨테이너에 등록
+
     @Bean
     public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
 

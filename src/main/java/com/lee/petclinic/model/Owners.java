@@ -2,7 +2,7 @@ package com.lee.petclinic.model;
 
 import java.sql.Timestamp;
 
-public class Owner {
+public class Owners {
 
     private Integer id;
     private String firstName;
