@@ -29,7 +29,6 @@ public class VetsController {
         System.out.println("데이터 찾기: " + checkedVetsModel.get(1).getName());
 
         model.addAttribute("vets", checkedVetsModel);
-        System.out.println("model 값: " + model.getAttribute("vets"));
         return "vetLists";
     }
 

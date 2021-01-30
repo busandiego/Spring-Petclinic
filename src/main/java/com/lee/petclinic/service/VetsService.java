@@ -17,20 +17,9 @@ public class VetsService {
         this.vetsRepository = vetsRepository;
     }
 
-
     public List<Vets> checkFindAll(){
-
          List<Vets> vets = vetsRepository.findAll();
-
-        System.out.println("vets: "+ vets);
-
-
-
-
+         //vets.set()
          return vets;
     }
-
-
-
-
 }

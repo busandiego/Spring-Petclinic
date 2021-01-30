@@ -43,7 +43,11 @@ public class Vets {
         this.name = name;
     }
 
-    public void setSpecialities(String specialities) {
+    public void setSpecialities(String specialities)
+    {
+
+
+
         this.specialities = specialities;
     }
 

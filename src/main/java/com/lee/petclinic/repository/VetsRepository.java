@@ -8,7 +8,6 @@ import java.util.List;
 @Repository
 public interface VetsRepository {
 
-
 public List<Vets> findAll();
 
 
