@@ -1,5 +1,7 @@
 package com.lee.petclinic.model;
 
+import com.lee.petclinic.dto.VetsDto;
+
 import java.sql.Timestamp;
 import java.util.List;
 

@@ -17,10 +17,26 @@
       </tr>
     </thead>
     <tbody>
+    <h3>ddd</h3>
       <tr th:each="vet : ${vets}">
         <td th:text="${vet.name}"></td>
         <td th:text="${vet.specialities}"></td>
+<!--        <td th:text="${vet.getSpecialitiesList()}"></td>-->
+        <td>
+          <th:block th:each="item : ${vet.getSpecialitiesList()}">
+            <button th:value="${item}" th:text="${item}"></button>
+          </th:block>
+        </td>
+
+<!--        <td th:each="specialty : ${vet.specialties}"-->
+<!--        th:text="${specialty}"></td>-->
+
+<!--          <span th:each="${vet.getSpecialitiesList()}"></span></td>-->
+
       </tr>
+<!--    <div th:text="${specialities}">-->
+
+<!--    </div>-->
     </tbody>
   </table>
 </body>

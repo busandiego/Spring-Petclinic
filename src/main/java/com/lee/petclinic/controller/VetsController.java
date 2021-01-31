@@ -1,6 +1,7 @@
 package com.lee.petclinic.controller;
 
 
+import com.lee.petclinic.dto.VetsDto;
 import com.lee.petclinic.model.Vets;
 import com.lee.petclinic.service.VetsService;
 import org.springframework.stereotype.Controller;
@@ -22,13 +23,20 @@ public class VetsController {
 
 
     @GetMapping("/vets")
-    public String vets(Model model) {
+    public String vets( Model model) {
 
-       List<Vets> checkedVetsModel = vetsService.checkFindAll();
-        System.out.println("checkedVetsModel: " + checkedVetsModel);
-        System.out.println("데이터 찾기: " + checkedVetsModel.get(1).getName());
+       List<VetsDto> vets = vetsService.checkFindAll();
+//
+//       List<Vets> vetsList = new ArrayList<>();
+//
+//        for (VetsDto item : vets) {
+//            vetsList.add(item.toVets());
+//        }
 
-        model.addAttribute("vets", checkedVetsModel);
+        System.out.println(vets);
+
+        model.addAttribute("vets", vets);
+
         return "vetLists";
     }
 

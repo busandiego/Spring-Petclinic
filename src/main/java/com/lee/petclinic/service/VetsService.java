@@ -1,6 +1,6 @@
 package com.lee.petclinic.service;
 
-import com.lee.petclinic.model.Vets;
+import com.lee.petclinic.dto.VetsDto;
 import com.lee.petclinic.repository.VetsRepository;
 import org.springframework.stereotype.Service;
 
@@ -17,9 +17,8 @@ public class VetsService {
         this.vetsRepository = vetsRepository;
     }
 
-    public List<Vets> checkFindAll(){
-         List<Vets> vets = vetsRepository.findAll();
-         //vets.set()
-         return vets;
+    public List<VetsDto> checkFindAll(){
+         return vetsRepository.findAll();
     }
+
 }
