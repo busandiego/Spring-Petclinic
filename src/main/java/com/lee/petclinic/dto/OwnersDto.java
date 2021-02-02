@@ -1,29 +1,14 @@
-package com.lee.petclinic.model;
+package com.lee.petclinic.dto;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
+import java.sql.Time;
 
-import java.sql.Timestamp;
-
-
-public class Owners {
+public class OwnersDto {
 
     private Integer id;
     private String firstName;
     private String lastName;
     private String city;
     private String telephone;
-    private Timestamp createdDate;
-
-
-    public Owners(Integer id, String firstName, String lastName, String city, String telephone, Timestamp createdDate) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.city = city;
-        this.telephone = telephone;
-        this.createdDate = createdDate;
-    }
 
     public Integer getId() {
         return id;
@@ -65,23 +50,24 @@ public class Owners {
         this.telephone = telephone;
     }
 
-    public Timestamp getCreatedDate() {
-        return createdDate;
-    }
+    public OwnersDto(Integer id, String firstName, String lastName, String city, String telephone) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.city = city;
+        this.telephone = telephone;
 
-    public void setCreatedDate(Timestamp createdDate) {
-        this.createdDate = createdDate;
+
     }
 
     @Override
     public String toString() {
-        return "Owners{" +
+        return "OwnersDto{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", city='" + city + '\'' +
                 ", telephone='" + telephone + '\'' +
-                ", createdDate=" + createdDate +
                 '}';
     }
 }

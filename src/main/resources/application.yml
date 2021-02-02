@@ -14,9 +14,7 @@ spring:
     url: jdbc:mysql://localhost:3306/petclinic?serverTimezone=Asia/Seoul&useSSL=false&allowPublicKeyRetrieval=true
     username: lee
     password: bitc5600
-  devtools:
-    livereload:
-      enabled: true
+
 
 
 

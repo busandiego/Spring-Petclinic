@@ -9,6 +9,9 @@
         FROM owner
     </select>
 
-
+    <insert id="save">
+        INSERT INTO owner(id, firstName, lastName, city, telephone, createdDate)
+        VALUES(#{id}, #{firstName}, #{lastName}, #{city}, #{telephone}, #{createdDate})
+    </insert>
 
 </mapper>
