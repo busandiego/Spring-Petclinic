@@ -47,11 +47,11 @@ public class OwnersController {
 
 
     @PostMapping("/add")
-    public String addOwner(@RequestBody
+    public String addOwner(@ModelAttribute
                                Owners owner){
 
         ownersService.addService(owner);
-        return "redirect:/owners/ownerList/" + owner.getId() ;
+        return "redirect:/owner/ownerList/" + owner.getId() ;
     }
 
 
