@@ -9,7 +9,6 @@ public class Vets {
 
     private Integer id;
     private String name;
-   // private List<String> specialities;
     private String specialities;
     private Timestamp createdDate;
 
@@ -47,13 +46,14 @@ public class Vets {
 
     public void setSpecialities(String specialities)
     {
-
-
-
         this.specialities = specialities;
     }
 
     public void setCreatedDate(Timestamp createdDate) {
         this.createdDate = createdDate;
+    }
+
+    public VetsDto toVetsDto(){
+        return new VetsDto(id,name,specialities);
     }
 }
