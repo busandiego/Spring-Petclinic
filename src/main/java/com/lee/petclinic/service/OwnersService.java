@@ -22,6 +22,14 @@ public class OwnersService {
 
 
     @Transactional
+    public List<Owners> findAll(){
+
+        List<Owners> owner = ownersRepository.findAll();
+
+        return owner;
+    }
+
+    @Transactional
     public void addService(Owners owner) {
         System.out.println("service Owners값은?: " + owner);
         int result = ownersRepository.save(owner);

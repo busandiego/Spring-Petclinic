@@ -10,6 +10,9 @@ import java.util.List;
 @Repository
 public interface OwnersRepository {
     //List<OwnersDto> findAll();
+    List<Owners> findAll();
     List<Owners> Post(Integer id);
     int save(Owners owner);
+
+
 }
