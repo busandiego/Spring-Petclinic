@@ -1,10 +1,16 @@
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <body>
 
 
 <h1>ownerList 부분입니다</h1>
-
-
+<table>
+    <tr th:each="owner:${owner}">
+       <td th:text="${owner.firstName}"></td>
+       <td th:text="${owner.lastName}"></td>
+       <td th:text="${owner.city}"></td>
+       <td th:text="${owner.telephone}"></td>
+    </tr>
+</table>
 </body>
 
 

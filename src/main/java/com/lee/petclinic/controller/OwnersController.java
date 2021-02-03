@@ -13,7 +13,7 @@ import java.util.List;
 
 // Vue나 React 였으면 RestController
 @Controller
-@RequestMapping("/owner")
+@RequestMapping("/owners")
 public class OwnersController {
 
     private final OwnersService ownersService;
@@ -29,13 +29,19 @@ public class OwnersController {
         return "owners/ownerFind";
     }
 
+    @GetMapping("/ownerslist")
+    public String ownerList(Model model){
+        List<Owners> owner = ownersService.findAll();
+
+        model.addAttribute("owner", owner);
+
+        return  "owners/ownersList";
+    }
 
     @GetMapping("/add")
     public String addOwnerForm(Model model){
 
-        List<Owners> owner = ownersService.findAll();
 
-        model.addAttribute("owner", owner);
 
 
         return  "owners/createOrUpdateOwnerForm";
@@ -46,7 +52,7 @@ public class OwnersController {
     public String addOwner(@ModelAttribute Owners owner){
 
         ownersService.addService(owner);
-        return "redirect:/owner/ownerDetail/" + owner.getId() ;
+        return "redirect:/owners/ownerDetail/" + owner.getId() ;
     }
 
 
