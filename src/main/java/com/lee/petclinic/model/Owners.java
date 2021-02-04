@@ -15,6 +15,8 @@ public class Owners {
     private String telephone;
     private Timestamp createdDate;
 
+    public Owners() {
+    }
 
     public Owners(Integer id, String firstName, String lastName, String city, String telephone, Timestamp createdDate) {
         this.id = id;
