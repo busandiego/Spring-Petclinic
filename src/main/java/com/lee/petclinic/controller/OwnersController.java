@@ -41,9 +41,6 @@ public class OwnersController {
     @GetMapping("/add")
     public String addOwnerForm(Model model){
 
-
-
-
         return  "owners/createOrUpdateOwnerForm";
     }
 
@@ -55,5 +52,11 @@ public class OwnersController {
         return "redirect:/owners/ownerDetail/" + owner.getId() ;
     }
 
+
+    @GetMapping("/onwerDetail/{id}")
+    public String ownerDetail(){
+
+        return "";
+    }
 
 }

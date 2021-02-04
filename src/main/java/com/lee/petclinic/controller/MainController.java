@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MainController {
 
     @GetMapping({"/", "/dashboard"})
-    public String dashBoard(){
+    public String welcome(){
 
-        return "dashboard";
+        return "welcome";
     }
 
 
