@@ -26,10 +26,7 @@ public class OwnersController {
 
     @GetMapping("/find")
     public String ownersFind(Map<String, Object> model) {
-        // 찾기부분에서 그냥 view 띄워주면 될거라 생각했는데 Owner 객체를 가지고
-        // /find 페이지에다 객체를 전송해줘야한다. 그 이유는
-        // 찾기 페이지인데 뷰에다가 객체를 가지고 찾기 버튼을 눌렸을 때 출력되야 하기 때문이다
-        // 만약에 찾기를 눌렀을 때 새로운 페이지로 가는거면
+        // 찾기부분에서 그냥 view 띄워주면 될거라 생각했는데 Owner 객체생성을 해준다.
 
         model.put("owner", new Owners());
 
@@ -37,11 +34,13 @@ public class OwnersController {
     }
 
     @GetMapping("/ownerslist")
-    public String ownerList(){
+    public String ownerList(@ModelAttribute Owners owners, Model model){
+       List<Owners> ownersList = ownersService.lastNamesearch(owners);
+        // Map<String, Object> model -> model.put
+        // Model model -> model.addAttribute
 
-
-        ownersService.findAll();
-
+        model.addAttribute("ownerList", ownersList);
+        System.out.println("ownerList: " + ownersList );
         return  "owners/ownersList";
     }
 

@@ -14,4 +14,11 @@
         VALUES(#{id}, #{firstName}, #{lastName}, #{city}, #{telephone}, #{createdDate})
     </insert>
 
+    <select id="findByLastName">
+        SELECT id, firstName, lastName, city, telephone, createdDate
+        FROM owner
+        WHERE lastName like %#{lastName}%
+    </select>
+    
+    
 </mapper>
