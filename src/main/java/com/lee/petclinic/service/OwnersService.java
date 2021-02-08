@@ -40,10 +40,10 @@ public class OwnersService {
         String lastName = owners.getLastName();
         if (lastName == null || lastName == "") {
             List<Owners> ownerList = ownersRepository.findAll();
-            System.out.println("service: " + ownerList);
             return ownerList;
         } else {
             List<Owners> ownersList = (List<Owners>) ownersRepository.findByLastName(lastName);
+            System.out.println("else: " + ownersList);
             return ownersList;
         }
     }

@@ -19,6 +19,6 @@ public interface OwnersRepository {
 
     Owners findById(Integer id);
 
-    Collection<Owners> findByLastName(@Param("lastName") String lastName);
+    Collection<Owners> findByLastName(String lastName);
 
 }
