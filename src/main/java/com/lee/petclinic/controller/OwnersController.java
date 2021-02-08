@@ -35,7 +35,7 @@ public class OwnersController {
 
     @GetMapping("/ownerslist")
     public String ownerList(@ModelAttribute Owners owners, Model model){
-       List<Owners> ownersList = ownersService.lastNamesearch(owners);
+       List<Owners> ownersList = ownersService.lastNameSearch(owners);
         // Map<String, Object> model -> model.put
         // Model model -> model.addAttribute
 

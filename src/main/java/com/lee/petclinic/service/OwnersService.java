@@ -35,11 +35,12 @@ public class OwnersService {
     // Map<String, Object> model,
 
     @Transactional(readOnly = true)
-    public List<Owners> lastNamesearch(Owners owners) {
+    public List<Owners> lastNameSearch(Owners owners) {
 
         String lastName = owners.getLastName();
         if (lastName == null || lastName == "") {
             List<Owners> ownerList = ownersRepository.findAll();
+            System.out.println("service: " + ownerList);
             return ownerList;
         } else {
             List<Owners> ownersList = (List<Owners>) ownersRepository.findByLastName(lastName);

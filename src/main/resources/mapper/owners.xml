@@ -14,10 +14,11 @@
         VALUES(#{id}, #{firstName}, #{lastName}, #{city}, #{telephone}, #{createdDate})
     </insert>
 
-    <select id="findByLastName">
+    <select id="findByLastName" resultType="com.lee.petclinic.model.Owners">
         SELECT id, firstName, lastName, city, telephone, createdDate
         FROM owner
-        WHERE lastName like #{%lastName%}%
+        WHERE lastName like '%${lastName}%'
+
     </select>
     
     
