@@ -15,8 +15,10 @@
     </insert>
 
     <select id="findByLastName" resultType="com.lee.petclinic.model.Owners">
-        SELECT id, firstName, lastName, city, telephone, createdDate
-        FROM owner
+        SELECT o.id, o.firstName, o.lastName, o.city, o.telephone, o.createdDate, p.name, p.birthDate, type
+        FROM owner o
+        LEFT OUTER JOIN pet p
+        ON o.id = p.ownerId
         WHERE lastName like '%${lastName}%'
 
     </select>
